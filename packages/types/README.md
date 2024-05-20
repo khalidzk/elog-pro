@@ -1,6 +1,6 @@
 # `@elog-pro/types`
 
-> TODO: description
+> elog types
 
 ## Usage
 
