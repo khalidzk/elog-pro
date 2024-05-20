@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LetTTGACO/elog.git"
+    "url": "git+https://github.com/khalidzk/elog.git"
   },
   "bugs": {
-    "url": "https://github.com/LetTTGACO/elog/issues"
+    "url": "https://github.com/khalidzk/elog/issues"
   },
   "scripts": {
     "build": "rimraf dist && tsup --legacy-output"
