@@ -1,6 +1,6 @@
 {
   "name": "@elog-pro/types",
-  "version": "0.0.7",
+  "version": "0.0.1-alpha.0",
   "description": "elog types",
   "homepage": "https://github.com/khalidzk/elog/tree/master/packages/types#readme",
   "author": "khalid <khalidlife@163.com>",
