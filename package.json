@@ -1,0 +1,76 @@
+{
+  "name": "elog-pro",
+  "version": "0.0.1",
+  "description": "开放式跨端博客解决方案，随意组合写作平台（语雀/Notion/FlowUs）和博客平台（Hexo/Vitepress/Confluence/WordPress）等",
+  "homepage": "https://github.com/khalidzk/elog#readme",
+  "author": "khalid <khalidlife@163.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "blog",
+    "yuque",
+    "notion",
+    "hexo",
+    "hugo",
+    "vitepress",
+    "flowus"
+  ],
+  "bugs": {
+    "url": "https://github.com/LetTTGACO/elog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LetTTGACO/elog.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "pnpm --filter=@elog-muyao/* run build",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "husky install",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && pnpm changeset publish",
+    "beta": "pnpm changeset pre enter beta",
+    "beta:exit": "pnpm changeset pre exit"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^2.2.0",
+    "@changesets/cli": "^2.25.2",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv-cli": "^6.0.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "jest": "^29.3.1",
+    "lint-staged": "^13.0.4",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.1",
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.3"
+  }
+}
